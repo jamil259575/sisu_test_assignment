@@ -9,21 +9,15 @@ test.describe("Placing bet", () => {
     await homePage.checkElementIsDisabled(homePage.placeBetButton);
   });
 
-  test.only("when unauthenticated user bets on a match and clicks place bet button, it should see auth tab", async ({
+  test("when unauthenticated user bets on a match and clicks place bet button, it should see auth tab", async ({
     homePage,
   }) => {
-    const inputStake = "10"
         const randomMatchContainer = homePage.matchContainer.nth(6);
     const secondOutcomeButton = randomMatchContainer
       .getByTestId("outcome-button")
       .nth(1);
     await secondOutcomeButton.click();
-    await homePage.fillElement(homePage.inputStake, inputStake);
-    const potReturnValue = homePage.potReturnValue
-    const oddValue = homePage.oddValue
-
     await homePage.clickButton(homePage.placeBetButton);
-
     await homePage.checkElementIsVisible(homePage.authScreen);
   });
 
@@ -50,7 +44,7 @@ test.describe("Placing bet", () => {
   }) => {
     await homePage.clickButton(homePage.sideBetsButton.nth(3));
     await homePage.checkElementIsVisible(homePage.betSlipClearButton);
-    // yazacam bunu
+    //fix it
   });
 
 });

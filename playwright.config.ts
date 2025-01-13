@@ -54,11 +54,11 @@ export default defineConfig({
     // },
     //
     // /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['iPhone 12'] },
-    //   grepInvert: /@desktopOnly/,
-    // },
+    {
+      name: 'Mobile Chrome',
+      use: { ...devices['iPhone 12'] },
+      grepInvert: /@desktopOnly/,
+    },
     // {
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },
