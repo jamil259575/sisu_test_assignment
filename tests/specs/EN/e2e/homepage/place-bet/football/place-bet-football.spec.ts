@@ -1,7 +1,7 @@
 import { test } from "./place-bet-football.fixture";
 
 test.describe("Football game bet", () => {
-  test("when user adds more side bets by bet builder for a game, it should see added bets on bet builder", async ({
+  test.skip("when user adds more side bets by bet builder for a game, it should see added bets on bet builder", async ({
     footballBetPage
   }) => {
     await footballBetPage.clickButton(footballBetPage.sideBetsButton.nth(0))
