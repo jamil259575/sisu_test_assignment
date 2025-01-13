@@ -1,16 +1,24 @@
 import { test as baseTest } from "@playwright/test";
-import { HomePage } from "../../../../../page-objects/homepage/home-page";
+import { HomePageEn } from "../../../../../page-objects/EN/homepage/home-page-en";
+import { BetSlipContainer } from "../../../../../page-objects/EN/betslip/bet-slip-container";
+import {AuthPage} from "../../../../../page-objects/EN/auth/auth-page";
 
-type HomePageFixture = {
-  homePage: HomePage;
+type CombinedFixtures = {
+  homePage: HomePageEn;
+  betSlipContainer:BetSlipContainer
 };
 
-export const test = baseTest.extend<HomePageFixture>({
+export const test = baseTest.extend<CombinedFixtures>({
   homePage: async ({ page, context }, use) => {
     const langCode = process.env.LANG_CODE || "en";
-    const homePage = new HomePage(page, langCode);
+    const homePage = new HomePageEn(page, langCode);
     await homePage.open();
     await homePage.clickButton(homePage.cookieConsent);
     await use(homePage);
+  },
+
+  betSlipContainer: async ({ page }, use) => {
+    const betSlipContainer = new BetSlipContainer(page);
+    await use(betSlipContainer);
   },
 });

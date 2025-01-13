@@ -48,6 +48,7 @@ export abstract class BasePage {
         state: "visible",
         timeout: TIMEOUT_WAIT_FOR_ELEMENT,
       });
+      await element.scrollIntoViewIfNeeded()
       await element.click();
     });
   }
@@ -70,6 +71,7 @@ export abstract class BasePage {
 
   public async fillElement(element: Locator, text: string): Promise<void> {
     await test.step("Fill element", async () => {
+      await element.scrollIntoViewIfNeeded()
       await element.fill(text);
     });
   }

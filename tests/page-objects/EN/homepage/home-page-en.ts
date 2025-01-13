@@ -1,8 +1,8 @@
-import { BasePage } from "../base-page";
+import { BasePage } from "../../base-page";
 import { Page } from "@playwright/test";
-import { getPathForLang } from "../../config/language/languages";
+import { getPathForLang } from "../../../config/language/languages";
 
-export class HomePage extends BasePage {
+export class HomePageEn extends BasePage {
   constructor(page: Page, langCode: string) {
     super(page);
     this.url = `/${langCode}${getPathForLang(langCode)}`;
@@ -27,10 +27,8 @@ export class HomePage extends BasePage {
   readonly continueButton = this.page.getByTestId("continue-button");
   readonly authScreen = this.page.getByTestId('auth-modal')
   readonly closeAuthScreen = this.page.getByTestId('close-modal')
-  readonly betSlipContainer = this.page.getByTestId('betslip-container')
   readonly betSlipFloater = this.page.getByTestId('betslip-floater')
-  readonly betSlipClearButton = this.page.getByTestId('betslip-clear-all-button')
-  readonly betSlipSelection = this.page.getByTestId('betslip-selection')
+  readonly betSlipFloaterMini = this.page.getByTestId('betslip-floater-mini')
   readonly sideBetsButton = this.page.getByTestId('expand-sidebets-button')
   readonly menuButton = this.page.getByTestId('menu-button')
   readonly potReturnValue = this.page.locator('[data-testid="quickbet-container"] ._1bhxhwd4._1bhxhwd5');
