@@ -5,7 +5,7 @@ on:
 jobs:
   test:
     timeout-minutes: 60
-    runs-on: ubuntu-latest-Europe # Specify Europe region
+    runs-on: self-hosted
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
