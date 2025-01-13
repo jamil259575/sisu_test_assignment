@@ -1,7 +1,6 @@
 import { test as baseTest } from "@playwright/test";
 import { HomePageEn } from "../../../../../page-objects/EN/homepage/home-page-en";
 import { BetSlipContainer } from "../../../../../page-objects/EN/betslip/bet-slip-container";
-import {AuthPage} from "../../../../../page-objects/EN/auth/auth-page";
 
 type CombinedFixtures = {
   homePage: HomePageEn;
