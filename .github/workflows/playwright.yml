@@ -17,10 +17,10 @@ jobs:
         run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
-      - name: check files
-        run: ls -la
+      - name: Checkout to tests folder
+        run: cd tests
       - name: Run Playwright tests with 4 workers
-        run: LANG_CODE=en npx playwright test --headless --workers=4
+        run: LANG_CODE=en npx playwright test --workers=4
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
