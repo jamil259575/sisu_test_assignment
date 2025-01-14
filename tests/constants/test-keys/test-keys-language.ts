@@ -1,0 +1,5 @@
+export const estoniaOption = '[data-testkey="et"]'
+export const finlandOption = '[data-testkey="fi"]'
+export const spainOption = '[data-testkey="es"]'
+export const icelandOption = '[data-testkey="is"]'
+export const englishOption = '[data-testkey="en"]'

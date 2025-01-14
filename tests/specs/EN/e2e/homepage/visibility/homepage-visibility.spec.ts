@@ -17,4 +17,11 @@ test.describe("Verify homepage elements", () => {
       await homePage.checkElementIsVisible(homePage.searchButton);
     },
   );
+
+  test("when user clicks all sports button, it should see all categories container", async ({
+    homePage,
+  }) => {
+    await homePage.clickButton(homePage.allSportsButton);
+    await homePage.checkElementIsVisible(homePage.allSportsContainer);
+  });
 });

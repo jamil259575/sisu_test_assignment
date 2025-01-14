@@ -1,4 +1,4 @@
-export const languages = [
+export const languagesAndPaths = [
     { code: 'en', path: '/sports' },
     { code: 'et', path: '/sport' },
     { code: 'fi', path: '/vedonlyonti' },
@@ -7,6 +7,8 @@ export const languages = [
 ];
 
 export function getPathForLang(langCode: string): string {
-    const langObj = languages.find((l) => l.code === langCode);
+    const langObj = languagesAndPaths.find((l) => l.code === langCode);
     return langObj ? langObj.path : '/sports';
 }
+
+export const estonianLanguagePath   = languagesAndPaths.find((lang) => lang.code === 'et');

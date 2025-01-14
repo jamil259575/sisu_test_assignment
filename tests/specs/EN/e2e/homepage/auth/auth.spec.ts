@@ -1,4 +1,4 @@
-import { test } from "./homepage.fixture";
+import { test } from "./auth.fixture";
 
 test.describe("Auth screen", () => {
   test("when user clicks login or signup buttons, it should see auth tab", async ({
@@ -19,8 +19,8 @@ test.describe("Auth screen", () => {
     authPage,
   }) => {
     await homePage.clickButton(homePage.loginButton);
-    await authPage.clickButton(authPage.registerTabButton)
-    await authPage.checkElementIsNotVisible(authPage.emailOption)
-    await authPage.checkElementIsNotVisible(authPage.pnpOption)
+    await authPage.clickButton(authPage.registerTabButton);
+    await authPage.checkElementIsNotVisible(authPage.emailOption);
+    await authPage.checkElementIsNotVisible(authPage.pnpOption);
   });
 });
