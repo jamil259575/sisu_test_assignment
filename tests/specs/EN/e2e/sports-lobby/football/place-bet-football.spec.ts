@@ -11,7 +11,7 @@ test.describe("Football game bets", () => {
     { tag: ["@desktopOnly"] },
     async ({ footballBetPage, homePage }) => {
       await footballBetPage.clickButton(
-        footballBetPage.sideBetsButton.nth(generateRandomNumber()),
+        footballBetPage.sideBetsButton.nth(5),
       );
       await footballBetPage.clickButton(footballBetPage.betBuilder);
       await footballBetPage.clickButton(footballBetPage.betByFirstHalf);
@@ -45,7 +45,7 @@ test.describe("Football game bets", () => {
     { tag: ["@mobileOnly"] },
     async ({ footballBetPage, homePage }) => {
       await footballBetPage.clickButton(
-        footballBetPage.sideBetsButton.nth(generateRandomNumber()),
+        footballBetPage.sideBetsButton.nth(4),
       );
       await footballBetPage.clickButton(footballBetPage.betBuilder);
       await footballBetPage.clickButton(footballBetPage.marketGroups);
