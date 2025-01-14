@@ -35,12 +35,6 @@ export class HomePage extends BasePage {
   readonly betSlipFloaterMini = this.page.getByTestId("betslip-floater-mini");
   readonly sideBetsButton = this.page.getByTestId("expand-sidebets-button");
   readonly menuButton = this.page.getByTestId("menu-button");
-  readonly potReturnValue = this.page.locator(
-    '[data-testid="quickbet-container"] ._1bhxhwd4._1bhxhwd5',
-  );
-  readonly oddValue = this.page.locator(
-    '[data-testid="quickbet-container"] ._1bhxhwd4',
-  );
   readonly allSportsButton = this.page.getByTestId("all-sports-button");
   readonly allSportsContainer = this.page.getByTestId("all-sports-button");
 }

@@ -1,9 +1,9 @@
 import { test } from "./place-bet-football.fixture";
-import { generateRandomNumber } from "../../../../../../constants/helper/helper-methods";
+import { generateRandomNumber } from "../../../../../constants/helper/helper-methods";
 import {
   fistHalf,
   secondHalf,
-} from "../../../../../../constants/test-keys/test-keys-market-options";
+} from "../../../../../constants/test-keys/test-keys-market-options";
 
 test.describe("Football game bets", () => {
   test(

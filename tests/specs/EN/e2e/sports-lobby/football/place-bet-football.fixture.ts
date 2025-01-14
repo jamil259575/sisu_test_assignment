@@ -1,6 +1,6 @@
 import { test as baseTest } from "@playwright/test";
-import { FootballBetPage } from "../../../../../../page-objects/EN/game-lobby/football/game-lobby-football";
-import { HomePage } from "../../../../../../page-objects/EN/homepage/home-page";
+import { FootballBetPage } from "../../../../../page-objects/EN/game-lobby/football/game-lobby-football";
+import { HomePage } from "../../../../../page-objects/EN/homepage/home-page";
 
 type CombinedFixtures = {
   footballBetPage: FootballBetPage;

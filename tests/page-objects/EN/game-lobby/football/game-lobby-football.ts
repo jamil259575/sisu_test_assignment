@@ -1,11 +1,12 @@
 import { Page } from "@playwright/test";
 import { getPathForLang } from "../../../../config/paths/paths";
 import { BetSlipContainer } from "../../betslip/bet-slip-container";
+import { footballPageUrl } from "../../../../config/url";
 
 export class FootballBetPage extends BetSlipContainer {
   constructor(page: Page, langCode: string) {
     super(page);
-    this.url = `/${langCode}${getPathForLang(langCode)}/football`;
+    this.url = `/${langCode}${getPathForLang(langCode)}${footballPageUrl}`;
   }
   readonly sideBetsButton = this.page.getByTestId("expand-sidebets-button");
   readonly betByFirstHalf = this.page.getByRole("tab", { name: "1. half" });
