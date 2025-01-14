@@ -99,7 +99,7 @@ The playwright.yml GitHub Actions workflow is preconfigured:
   name: Run Playwright tests
   run: LANG=en npx playwright test --workers=4
 ```
-Since the application has language options, by providing language variable automated tests can run against different languages. Project folder structure has been constructed in this way. Also, while integrating the tests to GitHub actions, Playwright was not able to access to page from actions server and that's why I declared _self-hosted_ type of run. You can see run history from actions and artifacts can be downloaded.
+Since the application has language options, by providing language variable (i.e LANG=fi ,LANG=est) and declaring urls per regions in fixtures automated tests can run against different languages. Project folder structure has been constructed in this way. Also, while integrating the tests to GitHub actions, Playwright was not able to access to page from actions server and that's why I declared _self-hosted_ type of run. You can see run history from actions and artifacts can be downloaded.
 Besides that, I had issues with webkit browser and I did not add it in the config file,however, I mentioned Mozilla and Chrome Browsers instead with mobile view.
 
 ##  Running tests
